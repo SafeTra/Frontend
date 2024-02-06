@@ -1,6 +1,6 @@
 const Footer = () => {
     return(
-        <footer className='footer'>
+        <footer className='pink_overlay'>
             <div className='container'>
                 <div className='d-flex justify-between align-start'>
                     <a className='footer_logo' href="#"><img src={require('../images/footer_logo.svg').default}/></a>
@@ -8,8 +8,8 @@ const Footer = () => {
                         <h3>Useful Links</h3>
                         <ul>
                             <li className='nav_item'><a className='nav_link'>About Us</a></li>
+                            <li className='nav_item'><a className='nav_link'>Services</a></li>
                             <li className='nav_item'><a className='nav_link'>How It Works</a></li>
-                            <li className='nav_item'><a className='nav_link'>Careers</a></li>
                         </ul>
                     </div>
                     <div>
@@ -31,10 +31,7 @@ const Footer = () => {
                         </div>
                     </div>                
                 </div>
-                <div className='d-flex justify-center copyright'>
-                    <p className='m-0'>© 2024 SafeTra+ Nigeria</p>
-                    <p className='m-0'>All rights reserved</p>
-                </div>
+                <p className='copyright text-center fw-700'>&copy; 2024 safeTra Nigeria &nbsp; All rights reserved</p>
             </div>
         </footer>
     )

@@ -37,9 +37,9 @@ const Header = () => {
                             <li className='nav_item'> <HashLink to="/#how-it-works" className='nav_link'>How It Works</HashLink></li>
                             <li className='nav_item'> <HashLink to="/#faqs" className='nav_link'>FAQs</HashLink></li>
                         </ul>
-                        <ul className={`nav_list d-flex ${menu ? 'disable' : ''}`}>
-                            <li className='nav_item'><BtnOutline name="Sign In" link='login'/></li>
-                            <li className='nav_item'><BtnPrimary name="Join for Free" link='signup'/></li>
+                        <ul className={`nav_list d-flex ${menu ? 'disable' : ''}`}>                            
+                            <li className='nav_item'><Link to={`/`} className='btn btn-outline'>Sign In</Link></li>
+                            <li className='nav_item'><Link to={`/`} className='btn btn-primary'>Join for Free</Link></li>
                         </ul>
                     </nav>
                 </HashRouter>

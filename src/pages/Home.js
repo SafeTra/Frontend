@@ -37,7 +37,7 @@ const Home = () => {
                 <div className='col'>
                     <div className='hero_circle'>
                         <img src={require("../images/hero_car.svg").default} alt='Buy & Sell Cars' className='hero_car'/>
-                        <p>Buy or sell your vehicle safely and confidently</p>                            
+                        <p className='fw-700'>Buy or sell your vehicle safely and confidently</p>                            
                     </div>
                     <div className='hero_card'>
                         <ul>
@@ -80,7 +80,7 @@ const Home = () => {
             <p>Here's what our satisfied users have to say about our escrow application.</p>
             <Slider review={review} prevSlider={prevReview} nextSlider={nextReview} />
         </section>
-        <section className="w-70" id='faqs'>
+        <section className="container" id='faqs'>
             <h2 className='m-0 text-center'>Frequently Asked Questions</h2>
             <div className="questions">
                 {faqs.map((faq, index) => <Accordion key={faq.id} isActive={activeIndex === index} handleClick={() => handleClick(index)} faq={faq}/>)}            
