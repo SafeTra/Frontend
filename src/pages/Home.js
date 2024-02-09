@@ -1,8 +1,11 @@
 import { useState } from 'react';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
 import Slider from '../components/Slider';
 import Accordion from '../components/Accordion';
+import SignUp from '../pages/Signup'
+import Login from '../pages/Login'
 import {howItWorks, services, reviews, faqs} from '../data/data'
 
 const Home = () => {
@@ -21,12 +24,20 @@ const Home = () => {
 
     const review = reviews[currentIndex];
     const brandElements = ['brand', 'jiji', 'iStore', 'jumia','amazon', 'brand2'].map(brand => <img src={require(`../images/${brand}.svg`)} alt={`${brand} Logo`}/>);
-    const howItWorkElements = howItWorks.map(props => <div key={props.id}> <img src={require(`../images/${props.img}.svg`)} alt={props.img}/> <p><span className='fw-700'>{props.id}</span> {props.text}</p> </div>);    
+    const howItWorkElements = howItWorks.map(props => <div key={props.id}> <img src={require(`../images/${props.img}.svg`)} alt={props.img}/> <p><span className='fw-700'>{props.id}.</span> {props.text}</p> </div>);    
     const seviceElements = services.map(service => <div key={service.id}> <div className='d-flex align-end'><img src={require(`../images/${service.img}.svg`)} alt={service.img}/> <h3 className='m-0'>{service.heading}</h3></div> <p>{service.text}</p> <a className='fw-700' href="#">Learn More</a></div>);    
     
     return(
     <>
-        <Header/>
+        <Router>
+            <div>
+                <Header />
+                <Routes>
+                    <Route path="/signup" component={SignUp} />
+                    <Route path="/login" component={Login} />
+                </Routes>
+            </div>
+        </Router>
         <section className='hero_section pink_overlay text-balance'>
             <div className='container d-flex justify-between'>
                 <div className='col'>
@@ -54,7 +65,7 @@ const Home = () => {
         <section id='how-it-works' className='container text-center'>
             <h2>Over N3 million of transactions <br/> protected with safeTra</h2>
             <p className='text-balance'>safeTra is the world’s most secure payment method from a counterparty risk perspective - safeguarding both buyer and seller, all funds transacted using safeTra are kept in trust.</p>
-            <div className='d-flex justify-between'>
+            <div className='d-grid'>
                 {howItWorkElements}
             </div>
         </section>
