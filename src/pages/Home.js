@@ -1,11 +1,8 @@
 import { useState } from 'react';
-import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
 import Slider from '../components/Slider';
 import Accordion from '../components/Accordion';
-import SignUp from '../pages/Signup'
-import Login from '../pages/Login'
 import {howItWorks, services, reviews, faqs} from '../data/data'
 
 const Home = () => {
@@ -29,15 +26,7 @@ const Home = () => {
     
     return(
     <>
-        <Router>
-            <div>
-                <Header />
-                <Routes>
-                    <Route path="/signup" component={SignUp} />
-                    <Route path="/login" component={Login} />
-                </Routes>
-            </div>
-        </Router>
+        <Header />
         <section className='hero_section pink_overlay text-balance'>
             <div className='container d-flex justify-between'>
                 <div className='col'>
@@ -50,7 +39,7 @@ const Home = () => {
                         <img src={require("../images/hero_car.svg").default} alt='Buy & Sell Cars' className='hero_car'/>
                         <p className='fw-700'>Buy or sell your vehicle safely and confidently</p>                            
                     </div>
-                    <div className='hero_card'>
+                    {/* <div className='hero_card'>
                         <ul>
                             <li><i className='fa-regular fa-circle-check'></i>Buyer & Seller agree on terms</li>
                             <li><i className='fa-regular fa-circle-check'></i>Buyer pays safeTra</li>
@@ -58,7 +47,7 @@ const Home = () => {
                             <li><i className='fa-regular fa-circle-check'></i>Buyer inspects & approve</li>
                             <li><i className='fa-regular fa-circle-check'></i>safeTra pays the seller</li>
                         </ul>
-                    </div>
+                    </div> */}
                 </div>
             </div>
         </section>

@@ -50,7 +50,7 @@ img{max-width: 100%; object-fit: cover;}
 .input label{font: 700 1rem/1.375 "Plus Jakarta Sans", sans-serif; color: var(--clr-black); }
 .input input{border: 1px solid var(--gray-200); background: var(--clr-white); padding: 1.0625rem 1rem 1.0625rem 1.25rem;}
 .btn-outline, .btn-primary{padding: .5rem 1rem;}
-.btn-form{margin-block: 1.31rem; padding: 1rem; cursor: pointer;}
+.btn-form{margin-block: 1.31rem; padding: 1rem; cursor: pointer; font-size: 1rem; letter-spacing: 1px;}
 .btn-form:hover, .btn-form:focus{background-color: #EA580C;}
 .btn{display: inline-block; border: 0; transition: background-color .3s ease-in;}
 .btn-outline, .btn-primary:hover{background-color: transparent;}

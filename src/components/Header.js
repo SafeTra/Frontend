@@ -31,13 +31,13 @@ const Header = () => {
                         <ul className={`nav_list d-flex ${menu ? 'disable' : ''}`}>
                             <li className='nav_item'> <Link to="/" className='nav_link active'>Home</Link></li>
                             <li className='nav_item'> <Link to="/about" className='nav_link'>About</Link></li>
-                            <li className='nav_item'> <Link to="/#services" className='nav_link'>Services</Link></li>
-                            <li className='nav_item'> <Link to="/#how-it-works" className='nav_link'>How It Works</Link></li>
-                            <li className='nav_item'> <Link to="/#faqs" className='nav_link'>FAQs</Link></li>
+                            <li className='nav_item'> <HashLink to="/#services" className='nav_link'>Services</HashLink></li>
+                            <li className='nav_item'> <HashLink to="/#how-it-works" className='nav_link'>How It Works</HashLink></li>
+                            <li className='nav_item'> <HashLink to="/#faqs" className='nav_link'>FAQs</HashLink></li>
                         </ul>
                         <ul className={`nav_list d-flex ${menu ? 'disable' : ''}`}>                            
-                            <li className='nav_item'><Link to='/signup' className='btn btn-outline'>Sign In</Link></li>
-                            <li className='nav_item'><Link to='/login' className='btn btn-primary'>Join for Free</Link></li>
+                            <li className='nav_item'><Link to='/login' className='btn btn-outline'>Sign In</Link></li>
+                            <li className='nav_item'><Link to='/signup' className='btn btn-primary'>Join for Free</Link></li>
                         </ul>
                     </nav>
             </div>

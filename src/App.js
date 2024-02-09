@@ -1,11 +1,17 @@
+import { Routes, Route } from 'react-router-dom';
 import './App.css';
+import Signup from './pages/Signup'; import Login from './pages/Login'; import Verification from './pages/Verification'; import Authentication from './pages/Authentication';
 import Home from './pages/Home';
 
 function App() {
   return (
-    <>
-      <Home/> 
-    </>
+    <Routes>
+      <Route path='/' element={<Home/>} />
+      <Route path='/signup' element={<Signup/>} />
+      <Route path='/login' element={<Login/>} />
+      <Route path='/verify' element={<Verification/>} />
+      <Route path='/authenticate' element={<Authentication/>} />
+    </Routes>
   );
 }
 

@@ -1,5 +1,6 @@
 import Button from "../components/Button";
 import Input from "../components/Input";
+import { Link} from 'react-router-dom';
 
 const Signup = () => {
     return (
@@ -12,7 +13,7 @@ const Signup = () => {
                 <Input label="Password" name="password" placeholder="Password (min. 8 character)"/>
                 <div className="checkbox d-flex fw-500"><input type="checkbox"/><div>I agree to <a href="#">Terms & Conditions</a></div></div>
                 <Button name="Sign up"/>
-                <p className=" text-center">Already have an account? <a href="#" className="fw-700">Login</a></p>
+                <p className=" text-center">Already have an account? <Link to="/login" className="fw-700">Login</Link></p>
             </form>
         </div>
     </div>
