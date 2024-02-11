@@ -1,9 +1,12 @@
+import { Link } from 'react-router-dom';
+
 const Footer = () => {
     return(
         <footer className='pink_overlay'>
             <div className='container'>
                 <div className='d-flex justify-between align-start'>
-                    <a className='footer_logo' href="#"><img src={require('../images/footer_logo.svg').default}/></a>
+                    <Link className='footer_logo slider-btn-lg' to="/"><img src={require('../images/footer_logo.svg').default}/></Link>
+                    <Link className='footer_logo slider-btn-sm' to="/"><img src={require('../images/logo.svg').default}/></Link>
                     <div>
                         <h3>Useful Links</h3>
                         <ul>

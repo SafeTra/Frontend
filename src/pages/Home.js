@@ -3,7 +3,9 @@ import Header from '../components/Header';
 import Footer from '../components/Footer';
 import Slider from '../components/Slider';
 import Accordion from '../components/Accordion';
-import {howItWorks, services, reviews, faqs} from '../data/data'
+import SliderSection from '../components/ImageSlider'
+import {howItWorks, services, reviews, faqs} from '../data/data';
+import { Link } from 'react-router-dom';
 
 const Home = () => {
     const [activeIndex, setActiveIndex] = useState(null);
@@ -32,14 +34,16 @@ const Home = () => {
                 <div className='col'>
                     <h1 className='m-0'>Never buy or sell online without using safeTra</h1>
                     <p>With safeTra you can buy and sell anything safely without any risks. Peace of mind at last!</p>
-                    <a href="#" className='btn btn-primary'>Get Started</a>
+                    <Link to='/signup' className='btn btn-primary'>Get Started</Link>
                 </div>
                 <div className='col'>
-                    <div className='hero_circle'>
+                    <SliderSection/>
+
+                    {/* <div className='hero_circle'>
                         <img src={require("../images/hero_car.svg").default} alt='Buy & Sell Cars' className='hero_car'/>
                         <p className='fw-700'>Buy or sell your vehicle safely and confidently</p>                            
                     </div>
-                    {/* <div className='hero_card'>
+                    <div className='hero_card'>
                         <ul>
                             <li><i className='fa-regular fa-circle-check'></i>Buyer & Seller agree on terms</li>
                             <li><i className='fa-regular fa-circle-check'></i>Buyer pays safeTra</li>
